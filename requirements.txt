@@ -1,0 +1,7 @@
+numpy
+Pillow
+torch
+wandb
+matplotlib
+scikit-learn
+jupyter

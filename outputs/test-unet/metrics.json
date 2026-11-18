@@ -1,0 +1,513 @@
+{
+  "checkpoint": "outputs\\checkpoints\\best.zip",
+  "checkpoint_epoch": 59,
+  "best_val_dice": 0.8077520573139191,
+  "split": "data\\splits\\test.txt",
+  "image_size": 256,
+  "threshold": 0.5,
+  "count": 100,
+  "mean_dice": 0.8139422965422273,
+  "mean_iou": 0.7222857994609513,
+  "per_image": [
+    {
+      "filename": "cju16d65tzw9d0799ouslsw25.jpg",
+      "dice": 0.9726288914680481,
+      "iou": 0.9467162489891052
+    },
+    {
+      "filename": "cju17otoe119u0799nqcbl8n1.jpg",
+      "dice": 0.8969430327415466,
+      "iou": 0.8131430149078369
+    },
+    {
+      "filename": "cju1819curo000988pd5xcqme.jpg",
+      "dice": 0.970949649810791,
+      "iou": 0.9435395002365112
+    },
+    {
+      "filename": "cju1ats0y372e08011yazcsxm.jpg",
+      "dice": 0.8676611185073853,
+      "iou": 0.7662556767463684
+    },
+    {
+      "filename": "cju1b0y2e396p08558ois175d.jpg",
+      "dice": 0.7468947172164917,
+      "iou": 0.5960351228713989
+    },
+    {
+      "filename": "cju1brhsj3rls0855a1vgdlen.jpg",
+      "dice": 0.37439149618148804,
+      "iou": 0.23030853271484375
+    },
+    {
+      "filename": "cju1c4fcu40hl07992b8gj0c8.jpg",
+      "dice": 0.8823898434638977,
+      "iou": 0.7895327806472778
+    },
+    {
+      "filename": "cju1cnnziug1l0835yh4ropyg.jpg",
+      "dice": 0.6742902398109436,
+      "iou": 0.5086258053779602
+    },
+    {
+      "filename": "cju1csmlc4ht10799b8ymmghg.jpg",
+      "dice": 0.8653668761253357,
+      "iou": 0.7626842856407166
+    },
+    {
+      "filename": "cju1d31sp4d4k0878r3fr02ul.jpg",
+      "dice": 0.9680014848709106,
+      "iou": 0.9379873275756836
+    },
+    {
+      "filename": "cju1dq3x1vgx109889c7wyirg.jpg",
+      "dice": 0.7145617008209229,
+      "iou": 0.5558895468711853
+    },
+    {
+      "filename": "cju1efbr0rqxz09931z0lf4vf.jpg",
+      "dice": 0.9118167757987976,
+      "iou": 0.8379257917404175
+    },
+    {
+      "filename": "cju1expq45zst0855rjqwwj4m.jpg",
+      "dice": 0.8841647505760193,
+      "iou": 0.7923792600631714
+    },
+    {
+      "filename": "cju1f8w0t65en0799m9oacq0q.jpg",
+      "dice": 0.7844839096069336,
+      "iou": 0.645391583442688
+    },
+    {
+      "filename": "cju1fuoa4wmc50835qfd11sp9.jpg",
+      "dice": 0.9588754773139954,
+      "iou": 0.9209998250007629
+    },
+    {
+      "filename": "cju1haab178i70799tk9z8y8x.jpg",
+      "dice": 0.9671629071235657,
+      "iou": 0.9364137649536133
+    },
+    {
+      "filename": "cju2hugv9vget0799hhk7ksvg.jpg",
+      "dice": 0.2919915020465851,
+      "iou": 0.1709543615579605
+    },
+    {
+      "filename": "cju2i03ptvkiu0799xbbd4det.jpg",
+      "dice": 0.9712856411933899,
+      "iou": 0.9441743493080139
+    },
+    {
+      "filename": "cju2r91dg2k090801bh0xzbxk.jpg",
+      "dice": 0.8171557784080505,
+      "iou": 0.6908397078514099
+    },
+    {
+      "filename": "cju2rpa30t07b0835im0erql0.jpg",
+      "dice": 0.9134507775306702,
+      "iou": 0.8406897187232971
+    },
+    {
+      "filename": "cju2rxm8rpbaf0993o3qr2oph.jpg",
+      "dice": 0.43977463245391846,
+      "iou": 0.2818661034107208
+    },
+    {
+      "filename": "cju2s16zp317h0799gr67jqc2.jpg",
+      "dice": 0.9795205593109131,
+      "iou": 0.9598631262779236
+    },
+    {
+      "filename": "cju2s9g11pnra0993gn4eh793.jpg",
+      "dice": 0.7029480338096619,
+      "iou": 0.5419582724571228
+    },
+    {
+      "filename": "cju2sggy13na70855tbeoqgha.jpg",
+      "dice": 0.8141743540763855,
+      "iou": 0.6865885853767395
+    },
+    {
+      "filename": "cju2tvrvm53ws0801a0jfjdxg.jpg",
+      "dice": 0.2940308451652527,
+      "iou": 0.17235414683818817
+    },
+    {
+      "filename": "cju2urqpwvxw70835rvndvtsi.jpg",
+      "dice": 0.9430146813392639,
+      "iou": 0.8921738862991333
+    },
+    {
+      "filename": "cju2xd75m82720801q4s4ik3n.jpg",
+      "dice": 0.9214389324188232,
+      "iou": 0.8543224334716797
+    },
+    {
+      "filename": "cju2xyd9vyi7m098831qcucse.jpg",
+      "dice": 0.9813664555549622,
+      "iou": 0.9634146094322205
+    },
+    {
+      "filename": "cju2yljr0yzhw0988ecf271ly.jpg",
+      "dice": 0.9592083096504211,
+      "iou": 0.9216141104698181
+    },
+    {
+      "filename": "cju2ysg748ru80878sp6j0gm0.jpg",
+      "dice": 0.846838653087616,
+      "iou": 0.7343626618385315
+    },
+    {
+      "filename": "cju2yyhsp933j0855hp32e012.jpg",
+      "dice": 0.9696372151374817,
+      "iou": 0.9410639405250549
+    },
+    {
+      "filename": "cju2z1nxlzaj40835wj81s1iy.jpg",
+      "dice": 0.8676106929779053,
+      "iou": 0.7661770582199097
+    },
+    {
+      "filename": "cju2zgbj9zmrw0835nnlzxj4c.jpg",
+      "dice": 0.898813009262085,
+      "iou": 0.8162219524383545
+    },
+    {
+      "filename": "cju2zo0fwzv580988qlijd2xa.jpg",
+      "dice": 0.7876806259155273,
+      "iou": 0.6497302651405334
+    },
+    {
+      "filename": "cju2zpw4q9vzr0801p0lysjdl.jpg",
+      "dice": 0.925301194190979,
+      "iou": 0.8609865307807922
+    },
+    {
+      "filename": "cju30ajhw09sx0988qyahx9s8.jpg",
+      "dice": 0.7955822348594666,
+      "iou": 0.6605533361434937
+    },
+    {
+      "filename": "cju30ftgja7170855xl9bkdm0.jpg",
+      "dice": 0.9670992493629456,
+      "iou": 0.9362944960594177
+    },
+    {
+      "filename": "cju30ia8da2bq0799klnehml2.jpg",
+      "dice": 0.5196026563644409,
+      "iou": 0.35098862648010254
+    },
+    {
+      "filename": "cju30ov1oah920801mi8thuyg.jpg",
+      "dice": 0.48186907172203064,
+      "iou": 0.3174094259738922
+    },
+    {
+      "filename": "cju30qbm1ad3x0855znuhpz9u.jpg",
+      "dice": 0.9621363878250122,
+      "iou": 0.9270355105400085
+    },
+    {
+      "filename": "cju32zhbnc1oy0801iyv1ix6p.jpg",
+      "dice": 0.75748211145401,
+      "iou": 0.6096347570419312
+    },
+    {
+      "filename": "cju3381d8bz3h07991xtl7ra0.jpg",
+      "dice": 0.8908562660217285,
+      "iou": 0.8031927943229675
+    },
+    {
+      "filename": "cju33mirdc8mj0799k33wzoes.jpg",
+      "dice": 0.9512521028518677,
+      "iou": 0.9070360064506531
+    },
+    {
+      "filename": "cju33za6l2qy70988jhrlp2ev.jpg",
+      "dice": 0.7755958437919617,
+      "iou": 0.6334475874900818
+    },
+    {
+      "filename": "cju34eqjpcpm508788b3lhp97.jpg",
+      "dice": 0.9839458465576172,
+      "iou": 0.9683989882469177
+    },
+    {
+      "filename": "cju34repocy5208780gswillm.jpg",
+      "dice": 0.6018635630607605,
+      "iou": 0.4304755926132202
+    },
+    {
+      "filename": "cju3518w2d838079939fqztbc.jpg",
+      "dice": 0.8816309571266174,
+      "iou": 0.7883184552192688
+    },
+    {
+      "filename": "cju358pwtdby20878cg7nm0np.jpg",
+      "dice": 0.9379310607910156,
+      "iou": 0.8831169009208679
+    },
+    {
+      "filename": "cju3v0fl3gwce0755qkjhzmd4.jpg",
+      "dice": 0.8954369425773621,
+      "iou": 0.8106707334518433
+    },
+    {
+      "filename": "cju3y21quj0ir0818kgjagr15.jpg",
+      "dice": 0.9277071356773376,
+      "iou": 0.8651620745658875
+    },
+    {
+      "filename": "cju3ya7goj6at0818v2l5ay7f.jpg",
+      "dice": 0.7956639528274536,
+      "iou": 0.6606660485267639
+    },
+    {
+      "filename": "cju40taxlkrho0987smigg0x0.jpg",
+      "dice": 0.6825225353240967,
+      "iou": 0.5180525183677673
+    },
+    {
+      "filename": "cju43mkj9m8wb0871qiadahub.jpg",
+      "dice": 0.9740289449691772,
+      "iou": 0.9493727087974548
+    },
+    {
+      "filename": "cju5bbtwsa8cl0987wgfsqpao.jpg",
+      "dice": 0.7885459661483765,
+      "iou": 0.6509087085723877
+    },
+    {
+      "filename": "cju5fu081d8gc0818l3yylujk.jpg",
+      "dice": 0.8019516468048096,
+      "iou": 0.6693817377090454
+    },
+    {
+      "filename": "cju5hqz50e7o90850e0prlpa0.jpg",
+      "dice": 0.8595566749572754,
+      "iou": 0.7537039518356323
+    },
+    {
+      "filename": "cju5i39mreass0817au8p22zy.jpg",
+      "dice": 0.7858185172080994,
+      "iou": 0.6472002267837524
+    },
+    {
+      "filename": "cju5nxkujgscq0817l9gss626.jpg",
+      "dice": 0.7724241614341736,
+      "iou": 0.6292272806167603
+    },
+    {
+      "filename": "cju5vwbr4lhqn0987a1pji0ux.jpg",
+      "dice": 0.9261894822120667,
+      "iou": 0.862525999546051
+    },
+    {
+      "filename": "cju5wi6bqlxy90755bu227nvb.jpg",
+      "dice": 0.8004685044288635,
+      "iou": 0.6673176288604736
+    },
+    {
+      "filename": "cju5yjq1pmlgc0801z0t24bly.jpg",
+      "dice": 0.7962355017662048,
+      "iou": 0.6614544987678528
+    },
+    {
+      "filename": "cju6v4szov55u0871qmqz3v8n.jpg",
+      "dice": 0.7237316966056824,
+      "iou": 0.5670685768127441
+    },
+    {
+      "filename": "cju6vvb8svhed0801jjcquh5e.jpg",
+      "dice": 0.0,
+      "iou": 0.0
+    },
+    {
+      "filename": "cju6vvxsev9y30987kespucdg.jpg",
+      "dice": 0.976464569568634,
+      "iou": 0.9540115594863892
+    },
+    {
+      "filename": "cju6wuojavt740818b5qcv3iw.jpg",
+      "dice": 0.9368277192115784,
+      "iou": 0.8811626434326172
+    },
+    {
+      "filename": "cju6xifswvwbo0987nibtdr50.jpg",
+      "dice": 0.8391672372817993,
+      "iou": 0.7229010462760925
+    },
+    {
+      "filename": "cju6ywm40wdbo0987pbftsvtg.jpg",
+      "dice": 0.9785250425338745,
+      "iou": 0.9579530358314514
+    },
+    {
+      "filename": "cju76lsehyia10987u54vn8rb.jpg",
+      "dice": 0.9701513051986694,
+      "iou": 0.9420328140258789
+    },
+    {
+      "filename": "cju7787c5yy3l080159mwqsnj.jpg",
+      "dice": 0.8976725935935974,
+      "iou": 0.8143430352210999
+    },
+    {
+      "filename": "cju77t0razbvm080106o56289.jpg",
+      "dice": 0.8726430535316467,
+      "iou": 0.7740609645843506
+    },
+    {
+      "filename": "cju7aez2x1jtj0871ztezs3oi.jpg",
+      "dice": 0.3219493329524994,
+      "iou": 0.1918591409921646
+    },
+    {
+      "filename": "cju7ajnbo1gvm098749rdouk0.jpg",
+      "dice": 0.9198306202888489,
+      "iou": 0.8515614867210388
+    },
+    {
+      "filename": "cju7bd1qu1mx409877xjxibox.jpg",
+      "dice": 0.9668480753898621,
+      "iou": 0.9358237385749817
+    },
+    {
+      "filename": "cju7bfx651qr80801cs7epotb.jpg",
+      "dice": 0.8589501976966858,
+      "iou": 0.7527718544006348
+    },
+    {
+      "filename": "cju7dda8w2br20818zhsuz8s7.jpg",
+      "dice": 0.957574725151062,
+      "iou": 0.9186027646064758
+    },
+    {
+      "filename": "cju7ddtz729960801uazp1knc.jpg",
+      "dice": 0.7894545197486877,
+      "iou": 0.6521477103233337
+    },
+    {
+      "filename": "cju7dn24o296i09871qfxb8s2.jpg",
+      "dice": 0.7936981320381165,
+      "iou": 0.6579598188400269
+    },
+    {
+      "filename": "cju7dz5yy2i7z0801ausi7rna.jpg",
+      "dice": 0.9357596039772034,
+      "iou": 0.8792746067047119
+    },
+    {
+      "filename": "cju7ecl9i2i060987xawjp4l0.jpg",
+      "dice": 0.7583977580070496,
+      "iou": 0.6108218431472778
+    },
+    {
+      "filename": "cju7ehljc2or70871261br8ai.jpg",
+      "dice": 0.7079145312309265,
+      "iou": 0.5478852391242981
+    },
+    {
+      "filename": "cju83yddek68q0850d2x7zfkm.jpg",
+      "dice": 0.8772401213645935,
+      "iou": 0.7813248038291931
+    },
+    {
+      "filename": "cju847pxykriq0755268ktrk2.jpg",
+      "dice": 0.8743594884872437,
+      "iou": 0.7767662405967712
+    },
+    {
+      "filename": "cju849c23kgnk0817cgv2hw1e.jpg",
+      "dice": 0.6665390133857727,
+      "iou": 0.4998563826084137
+    },
+    {
+      "filename": "cju84ih17kp5l09876bkooocl.jpg",
+      "dice": 0.8150883316993713,
+      "iou": 0.6878895163536072
+    },
+    {
+      "filename": "cju885ikhnmkn09878s2lqtuh.jpg",
+      "dice": 0.9601602554321289,
+      "iou": 0.9233733415603638
+    },
+    {
+      "filename": "cju886ryxnsl50801r93jai7q.jpg",
+      "dice": 0.9496844410896301,
+      "iou": 0.9041896462440491
+    },
+    {
+      "filename": "cju887ftknop008177nnjt46y.jpg",
+      "dice": 0.9353233575820923,
+      "iou": 0.8785046935081482
+    },
+    {
+      "filename": "cju88oh0po9gq0801nge4tgr1.jpg",
+      "dice": 0.6880655884742737,
+      "iou": 0.5244664549827576
+    },
+    {
+      "filename": "cju88v2f9oi8w0871hx9auh01.jpg",
+      "dice": 0.950764000415802,
+      "iou": 0.9061488509178162
+    },
+    {
+      "filename": "cju89y9h0puti0818i5yw29e6.jpg",
+      "dice": 0.9550535678863525,
+      "iou": 0.9139736890792847
+    },
+    {
+      "filename": "cju8abobpqbir08189u01huru.jpg",
+      "dice": 0.8856523036956787,
+      "iou": 0.7947719693183899
+    },
+    {
+      "filename": "cju8aeei7q8k308173n9y4klv.jpg",
+      "dice": 0.9424460530281067,
+      "iou": 0.8911564350128174
+    },
+    {
+      "filename": "cju8b7aqtr4a00987coba14b7.jpg",
+      "dice": 0.9702072739601135,
+      "iou": 0.9421383738517761
+    },
+    {
+      "filename": "cju8c2rqzs5t80850d0zky5dy.jpg",
+      "dice": 0.5869052410125732,
+      "iou": 0.41533327102661133
+    },
+    {
+      "filename": "cju8c3xs7sauj0801ieyzezr5.jpg",
+      "dice": 0.9379181265830994,
+      "iou": 0.8830939531326294
+    },
+    {
+      "filename": "cjyzjzssvd8pq0838f4nolj5l.jpg",
+      "dice": 0.005540166050195694,
+      "iou": 0.0027777778450399637
+    },
+    {
+      "filename": "cjyzk8qieoboa0848ogj51wwm.jpg",
+      "dice": 0.9151820540428162,
+      "iou": 0.8436273336410522
+    },
+    {
+      "filename": "cjyzufihqquiw0a46jatrbwln.jpg",
+      "dice": 0.6772491931915283,
+      "iou": 0.5120006203651428
+    },
+    {
+      "filename": "cjyzurzvohqnr0794es1itzek.jpg",
+      "dice": 0.9508131742477417,
+      "iou": 0.9062381982803345
+    },
+    {
+      "filename": "ck2bxw18mmz1k0725litqq2mc.jpg",
+      "dice": 0.5652551054954529,
+      "iou": 0.39397603273391724
+    }
+  ]
+}
