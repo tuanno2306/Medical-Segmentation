@@ -7,7 +7,7 @@ from torch.utils.data import Dataset
 
 
 class PolypDataset(Dataset):
-    def __init__(self, data_dir, split_file, image_size=(256, 256)):
+    def __init__(self, data_dir, split_file, image_size=(256, 256), rgb_mean=None, rgb_std=None):
         """Load paired Kvasir-SEG images and binary masks for a saved split.
 
         Args:
@@ -19,6 +19,12 @@ class PolypDataset(Dataset):
         self.image_dir = self.data_dir / "images"
         self.mask_dir = self.data_dir / "masks"
         self.image_size = image_size
+        self.rgb_mean = self.rgb_std = None
+        if rgb_mean is not None or rgb_std is not None:
+            if rgb_mean is None or rgb_std is None or len(rgb_mean) != 3 or len(rgb_std) != 3 or min(rgb_std) <= 0:
+                raise ValueError("RGB normalization requires three means and three positive standard deviations")
+            self.rgb_mean = torch.tensor(rgb_mean, dtype=torch.float32).view(3, 1, 1)
+            self.rgb_std = torch.tensor(rgb_std, dtype=torch.float32).view(3, 1, 1)
 
         split_path = Path(split_file)
         self.filenames = [
@@ -49,6 +55,8 @@ class PolypDataset(Dataset):
 
         # Ảnh: (cao, rộng, kênh) -> (kênh, cao, rộng)
         image = torch.from_numpy(image).permute(2, 0, 1)
+        if self.rgb_mean is not None:
+            image = (image - self.rgb_mean) / self.rgb_std
 
         # Mask: (cao, rộng) -> (1, cao, rộng)
         mask = torch.from_numpy(mask).unsqueeze(0)

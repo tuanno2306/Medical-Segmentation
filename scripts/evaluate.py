@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader
 
 from src.datasets.polyp_dataset import PolypDataset
 from src.metrics.segmentation_metrics import segmentation_scores
-from src.models.unet import UNet
+from src.models import build_model
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -32,6 +32,8 @@ def save_examples(dataset, predictions, scores, path):
                              squeeze=False, layout="constrained")
     for (label, idx), row in zip(examples, axes):
         image, target = dataset[idx]
+        if dataset.rgb_mean is not None:
+            image = (image * dataset.rgb_std + dataset.rgb_mean).clamp(0, 1)
         score = scores[idx]
         row[0].imshow(image.permute(1, 2, 0))
         row[0].set_title(f"{label} Dice\n{score['filename']}", fontsize=9)
@@ -63,17 +65,18 @@ def main():
     checkpoint = torch.load(args.checkpoint, map_location="cpu", weights_only=True)
     config = checkpoint["config"]
     size = config["image_size"]
-    model = UNet(base_channels=config["base_channels"])
+    model = build_model(config)
     model.load_state_dict(checkpoint["model_state_dict"])
     model.to(device).eval()
-    dataset = PolypDataset(args.data_dir, args.split_file, (size, size))
+    dataset = PolypDataset(args.data_dir, args.split_file, (size, size),
+                           rgb_mean=config.get("rgb_mean"), rgb_std=config.get("rgb_std"))
     if not len(dataset):
         raise ValueError(f"Empty split: {args.split_file}")
     loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False)
     scores, predictions = [], []
     print(f"Evaluating {len(dataset)} images on {device} at {size}x{size}", flush=True)
 
-    threshold = 0.5
+    threshold = config.get("threshold", 0.5)
     with torch.inference_mode():
         for images, masks in loader:
             logits = model(images.to(device))

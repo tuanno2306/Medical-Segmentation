@@ -2,6 +2,10 @@
 
 This project segments polyps in endoscopy images from [Kvasir-SEG](https://datasets.simula.no/kvasir-seg/). A U-Net trained from scratch predicts a binary mask that labels each pixel as polyp or background.
 
+## Shared BCE comparison
+
+The team uses [the comparison protocol](configs/README.md) and [the shared training configuration](configs/comparison.json) for the scratch and ImageNet encoder experiments. The results below describe the earlier BCE + Tversky run.
+
 ## Data and method
 
 - **Exploratory analysis.** Verified all 1,000 image–mask pairs, inspected mask values and polyp area, and created an image-level split of 800 training, 100 validation, and 100 test images.

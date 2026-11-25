@@ -3,7 +3,7 @@ import torch
 from src.metrics.segmentation_metrics import segmentation_scores
 
 
-def run_epoch(model, loader, criterion, device, optimizer=None):
+def run_epoch(model, loader, criterion, device, optimizer=None, threshold=0.5):
     """Train if optimizer is provided, otherwise validate; average per image."""
     training = optimizer is not None
     model.train(training)
@@ -19,7 +19,7 @@ def run_epoch(model, loader, criterion, device, optimizer=None):
             if training:
                 loss.backward()
                 optimizer.step()
-            dice, iou = segmentation_scores(logits.detach(), masks)
+            dice, iou = segmentation_scores(logits.detach(), masks, threshold)
             batch_size = images.size(0)
             loss_sum += loss.item() * batch_size
             dice_sum += dice.sum().item()
