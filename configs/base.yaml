@@ -1,0 +1,39 @@
+model:
+  name: "resnet34_unet"
+  in_channels: 3
+  num_classes: 1
+  pretrained: true
+  freeze_encoder: false
+  bilinear: true
+  dropout: 0.0
+
+data:
+  images_dir: "data/raw/images"
+  masks_dir: "data/raw/masks"
+  image_size: 256
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  batch_size: 4
+  num_workers: 0
+  seed: 42
+
+training:
+  epochs: 60
+  encoder_lr: 1.0e-4
+  decoder_lr: 1.0e-4
+  weight_decay: 0.0
+  loss: "bce"
+  bce_weight: 0.5
+  dice_weight: 0.5
+  early_stopping_patience: 10
+  checkpoint_dir: "outputs/checkpoints/base"
+
+wandb:
+  enabled: true
+  entity: "noct2306-uet"
+  project: "BTL_DL_2026"
+  run_name: "resnet34-unet-base-bce"
+  tags: ["resnet34", "pretrained", "unet", "bce", "shared-config"]
+  log_images: false
+  log_image_every_n_epochs: 0
