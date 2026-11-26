@@ -137,6 +137,7 @@ def main() -> None:
                 if wandb_cfg.get("log_images", True)
                 else 0
             ),
+            early_stopping_patience=train_cfg.get("early_stopping_patience"),
         )
         best_ckpt_path = trainer.fit(
             train_loader=train_loader,

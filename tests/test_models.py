@@ -144,3 +144,39 @@ def test_trainer_smoke_with_synthetic_data(tmp_path: Path) -> None:
     )
     best_ckpt = trainer.fit(train_loader=loader, val_loader=loader, epochs=1)
     assert best_ckpt.exists()
+
+
+def test_trainer_early_stopping(tmp_path: Path) -> None:
+    model = ResNet34UNet(pretrained=False)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3)
+    criterion = BCEDiceLoss()
+    logger = WandbLogger(enabled=False)
+
+    imgs = torch.randn(2, 3, 64, 64)
+    masks = (torch.rand(2, 1, 64, 64) > 0.5).float()
+    loader = DataLoader(TensorDataset(imgs, masks), batch_size=2)
+
+    trainer = Trainer(
+        model=model,
+        optimizer=optimizer,
+        criterion=criterion,
+        device=torch.device("cpu"),
+        logger=logger,
+        checkpoint_dir=tmp_path,
+        log_image_every_n_epochs=0,
+        early_stopping_patience=3,
+    )
+
+    fixed_val = {
+        "loss": 0.5,
+        "dice": 0.5,
+        "iou": 0.33,
+        "precision": 0.5,
+        "recall": 0.5,
+        "accuracy": 0.5,
+    }
+    trainer.evaluator.evaluate = MagicMock(return_value=(fixed_val, None))
+    trainer.fit(train_loader=loader, val_loader=loader, epochs=10)
+
+    # Epoch 1 sets best_val_dice=0.5, then 3 non-improving epochs (2, 3, 4) trigger early stop
+    assert trainer.evaluator.evaluate.call_count == 4
