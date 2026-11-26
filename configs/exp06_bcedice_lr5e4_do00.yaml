@@ -1,0 +1,39 @@
+model:
+  name: "resnet34_unet"
+  in_channels: 3
+  num_classes: 1
+  pretrained: true
+  freeze_encoder: false
+  bilinear: true
+  dropout: 0.0
+
+data:
+  images_dir: "data/raw/images"
+  masks_dir: "data/raw/masks"
+  image_size: 256
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  batch_size: 8
+  num_workers: 2
+  seed: 42
+
+training:
+  epochs: 100
+  encoder_lr: 1.0e-4
+  decoder_lr: 5.0e-4
+  weight_decay: 1.0e-4
+  loss: "bce_dice"
+  bce_weight: 0.5
+  dice_weight: 0.5
+  early_stopping_patience: 10
+  checkpoint_dir: "outputs/checkpoints/exp06_bcedice_lr5e4_do00"
+
+wandb:
+  enabled: true
+  entity: "noct2306-uet"
+  project: "BTL_DL_2026"
+  run_name: "exp06-bcedice-lr5e4-do00"
+  tags: ["resnet34", "grid-search", "bce_dice"]
+  log_images: false
+  log_image_every_n_epochs: 0
