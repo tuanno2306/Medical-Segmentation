@@ -12,7 +12,7 @@ from src.datasets.polyp_dataset import PolypDataset
 from src.datasets.split_dataset import split_image_mask_pairs
 from src.datasets.transform import SegmentationTransform
 from src.engine.evaluator import Evaluator
-from src.engine.losses import BCEDiceLoss
+from src.engine.losses import build_loss
 from src.engine.trainer import Trainer
 from src.models import ResNet34UNet
 from src.utils.checkpoint import load_checkpoint
@@ -108,9 +108,10 @@ def main() -> None:
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
         optimizer, T_max=train_cfg["epochs"]
     )
-    criterion = BCEDiceLoss(
-        bce_weight=train_cfg["bce_weight"],
-        dice_weight=train_cfg["dice_weight"],
+    criterion = build_loss(
+        loss_name=train_cfg.get("loss", "bce"),
+        bce_weight=train_cfg.get("bce_weight", 0.5),
+        dice_weight=train_cfg.get("dice_weight", 0.5),
     )
 
     wandb_cfg = cfg["wandb"]

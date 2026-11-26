@@ -36,3 +36,19 @@ class BCEDiceLoss(nn.Module):
         return self.bce_weight * self.bce(logits, targets) + self.dice_weight * self.dice(
             logits, targets
         )
+
+
+def build_loss(
+    loss_name: str,
+    bce_weight: float = 0.5,
+    dice_weight: float = 0.5,
+) -> nn.Module:
+    """Instantiate segmentation loss by name ('bce', 'dice', or 'bce_dice')."""
+    name = loss_name.strip().lower()
+    if name == "bce":
+        return nn.BCEWithLogitsLoss()
+    if name == "dice":
+        return DiceLoss()
+    if name == "bce_dice":
+        return BCEDiceLoss(bce_weight=bce_weight, dice_weight=dice_weight)
+    raise ValueError(f"Unsupported loss '{loss_name}'. Choose from: bce, dice, bce_dice.")

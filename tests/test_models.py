@@ -180,3 +180,13 @@ def test_trainer_early_stopping(tmp_path: Path) -> None:
 
     # Epoch 1 sets best_val_dice=0.5, then 3 non-improving epochs (2, 3, 4) trigger early stop
     assert trainer.evaluator.evaluate.call_count == 4
+
+
+def test_build_loss() -> None:
+    from src.engine.losses import DiceLoss, build_loss
+
+    assert isinstance(build_loss("bce"), torch.nn.BCEWithLogitsLoss)
+    assert isinstance(build_loss("dice"), DiceLoss)
+    assert isinstance(build_loss("bce_dice"), BCEDiceLoss)
+    with pytest.raises(ValueError):
+        build_loss("unknown_loss")

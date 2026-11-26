@@ -23,6 +23,7 @@ training:
   encoder_lr: 1.0e-4
   decoder_lr: 5.0e-4
   weight_decay: 1.0e-4
+  loss: "bce"
   bce_weight: 0.5
   dice_weight: 0.5
   early_stopping_patience: 10
@@ -32,7 +33,7 @@ wandb:
   enabled: true
   entity: "noct2306-uet"
   project: "BTL_DL_2026"
-  run_name: "resnet34-unet-bce-dice"
+  run_name: "resnet34-unet-bce"
   tags: ["resnet34", "pretrained", "unet", "kvasir-seg"]
   log_images: false
   log_image_every_n_epochs: 0
