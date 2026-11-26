@@ -50,7 +50,6 @@ htmlcov/
 # =========================
 # Project Data & Outputs (keep .gitkeep)
 # =========================
-data/raw/*
 !data/raw/.gitkeep
 
 data/processed/*
