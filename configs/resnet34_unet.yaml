@@ -19,7 +19,7 @@ data:
   seed: 42
 
 training:
-  epochs: 30
+  epochs: 50
   encoder_lr: 1.0e-4
   decoder_lr: 5.0e-4
   weight_decay: 1.0e-4
@@ -33,5 +33,5 @@ wandb:
   project: "BTL_DL_2026"
   run_name: "resnet34-unet-bce-dice"
   tags: ["resnet34", "pretrained", "unet", "kvasir-seg"]
-  log_images: true
-  log_image_every_n_epochs: 5
+  log_images: false
+  log_image_every_n_epochs: 0
